@@ -1,0 +1,10 @@
+type TransformCanonicalBiometricMeasurementToBiometricMeasurement mixes BiometricMeasurement transforms CanonicalBiometricMeasurement {
+
+    parent    : ~ expression '{ "id" : concat(patientId,"_",measurementCode) }'
+
+    start     : ~ expression "dateTime(measurementTs,'y-M-d H:m:s')"
+
+    value     : ~ expression 'value'
+
+
+}

@@ -1,0 +1,15 @@
+type TransformCanonicalBiometricMeasurementToBiometricSeries mixes BiometricSeries transforms CanonicalBiometricMeasurement {
+
+    id         : ~ expression 'concat(patientId,"_",measurementCode)'
+    
+    parent     : ~ expression '{ "id" : patientId }'
+    
+//    treatment  : ~ expression 'PREVIOUS'
+    
+    measurementCode : ~ expression '{ "id" : measurementCode }'
+    
+    interval   : ~ expression '"HOUR"'
+    
+    // bucketInterval: ~ expression 'string("DAY")'
+
+}

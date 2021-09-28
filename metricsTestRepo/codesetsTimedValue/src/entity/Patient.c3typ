@@ -1,0 +1,7 @@
+entity type Patient mixes MetricEvaluatable schema name 'PATIENT' {
+    
+    firstName   : string
+    lastName    : string
+
+    measurements  : [BiometricSeries](parent)
+}

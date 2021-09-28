@@ -1,0 +1,6 @@
+type CanonicalBiometricMeasurement mixes Canonical<CanonicalBiometricMeasurement> {
+    patientId : string
+    measurementTs : string
+    measurementCode : string
+    value : double
+}

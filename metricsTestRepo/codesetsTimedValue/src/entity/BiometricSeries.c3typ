@@ -1,0 +1,9 @@
+entity type BiometricSeries mixes TimedDataHeader<BiometricMeasurement> schema name 'BIOMETRICSERIES' {
+
+  parent   : Patient
+
+  measurementCode : CodeAlias
+
+  treatment: string enum Treatment
+
+}

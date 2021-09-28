@@ -1,0 +1,6 @@
+@db(index=['parent, descending(start), descending(end)'])
+entity type CodeAliasTimedIntervalValueHistory mixes TimedIntervalValueHistory<CodeAlias> schema name 'CODEALIASHIST' {
+ 
+   value : string
+
+}

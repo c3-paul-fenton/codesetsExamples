@@ -1,0 +1,16 @@
+@db(compactType=true,
+    datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=1000000)
+entity type BiometricMeasurement mixes TimedDataPoint<BiometricSeries> schema name 'BIOMEASUREMENT' {
+
+  @ts(treatmentPath="parent.treatment")
+  value : double
+
+  measurementTime: datetime calc "start"
+  alias: string calc "parent.measurementCode.aliasHistory.((start <= measurementTime) && (end > measurementTime)).value"
+
+}
