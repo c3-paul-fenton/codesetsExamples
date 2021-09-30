@@ -1,3 +1,4 @@
 local/volume/
 local/prov/
 .DS_Store
+**/curl_output.txt

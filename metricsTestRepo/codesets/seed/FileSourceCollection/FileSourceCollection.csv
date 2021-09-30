@@ -1,0 +1,3 @@
+id,name,source.typeName,sourceSystem.id,doNotArchiveSources
+CanonicalBiometricMeasurement,CanonicalBiometricMeasurement,CanonicalBiometricMeasurement,Legacy,true
+CanonicalCodeAlias,CanonicalCodeAlias,CanonicalCodeAlias,Legacy,true

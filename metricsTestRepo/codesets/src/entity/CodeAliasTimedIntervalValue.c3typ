@@ -1,3 +1,0 @@
-type CodeAliasTimedIntervalValue mixes TimedIntervalValue {
-   value : string
-}

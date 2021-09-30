@@ -7,10 +7,19 @@
     shortIdReservationRange=1000000)
 entity type BiometricMeasurement mixes TimedDataPoint<BiometricSeries> schema name 'BIOMEASUREMENT' {
 
+  // the value being measured, and the treatment to normalize it into a timeseries
   @ts(treatmentPath="parent.treatment")
   value : double
 
+  // renames the value for 'start' from this scope
   measurementTime: datetime calc "start"
+
+  // gets the appropriate alias for this measurementCode at the time of measurement
   alias: string calc "parent.measurementCode.aliasHistory.((start <= measurementTime) && (end > measurementTime)).value"
 
 }
+
+
+
+
+

@@ -1,10 +1,10 @@
 type CanonicalCodeAlias mixes Canonical<CanonicalCodeAlias> {
     
-    measurementCode   : string
+    measurementCode: string
     
-    start  : string
+    start: string
 
-    end    : string
+    end: string
 
-    alias : string
+    alias: string
 }

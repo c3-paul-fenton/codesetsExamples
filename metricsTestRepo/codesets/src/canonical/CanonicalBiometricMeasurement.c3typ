@@ -1,6 +1,12 @@
 type CanonicalBiometricMeasurement mixes Canonical<CanonicalBiometricMeasurement> {
+
+    // id of the {@link Patient} associated with this measurement
     patientId : string
+
+    // the date/time this measurement was taken
     measurementTs : string
+
+    // the {@link }
     measurementCode : string
     value : double
 }

@@ -1,7 +1,7 @@
 type TransformCanonicalCodeAliasToCodeAliasTimedIntervalValueHistory mixes CodeAliasTimedIntervalValueHistory transforms CanonicalCodeAlias {
     id: ~ expression "concat(measurementCode, '_', start)"
     parent: ~ expression { id: 'measurementCode' }
-    start: ~ expression "dateTime(start,'y-M-d H:m:s')"
-    end: ~ expression "dateTime(end,'y-M-d H:m:s')"
+    start: ~ expression "dateTime(start)"
+    end: ~ expression "dateTime(end)"
     value: ~ expression "alias"
 }

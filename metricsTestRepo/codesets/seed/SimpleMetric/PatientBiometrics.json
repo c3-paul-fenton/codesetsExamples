@@ -1,38 +1,6 @@
 {
     "type": "[SimpleMetric]",
     "value": [
-        // {
-        //     "id"  : "SystolicBloodPressure_Patient",
-        //     "name": "SystolicBloodPressure",
-        //     "srcType": "Patient",
-        //     "path": "measurements.(alias=='SystolicBP')",
-        //     "expression": "avg(avg(normalized.data.value))",
-        //     "description": "Average Systolic Blood Pressure"
-        // },
-        // {
-        //     "id"  : "DiastolicBloodPressure_Patient",
-        //     "name": "DiastolicBloodPressure",
-        //     "srcType": "Patient",
-        //     "path": "measurements.(alias=='DiastolicBP')",
-        //     "expression": "avg(avg(normalized.data.value))",
-        //     "description": "Average Systolic Blood Pressure"
-        // },
-        // {
-        //     "id"  : "SystolicBloodPressureSeated_Patient",
-        //     "name": "SystolicBloodPressureSeated",
-        //     "srcType": "Patient",
-        //     "path": "measurements.(alias=='SystolicBPSeated')",
-        //     "expression": "avg(avg(normalized.data.value))",
-        //     "description": "Average Systolic Blood Pressure while Seated"
-        // },
-        // {
-        //     "id"  : "DiastolicBloodPressureSeatedPatient",
-        //     "name": "DiastolicBloodPressureSeated",
-        //     "srcType": "Patient",
-        //     "path": "measurements.(alias=='DiastolicBPSeated')",
-        //     "expression": "avg(avg(normalized.data.value))",
-        //     "description": "Averge Systolic Blood Pressure while Seated"
-        // },
         {
             "id"  : "MeasurementCode_001",
             "name": "MeasurementCode_001",
@@ -58,7 +26,7 @@
                 "data": "data",
                 "filter": "alias == 'SystolicBP'",
                 "value": "value",
-                "treatment": "PREVIOUS",
+                "treatment": "SUM",
                 "overlapHandling": "SUM",
                 "start": "start"
             }
@@ -71,6 +39,36 @@
             "tsDecl": {
                 "data": "data",
                 "filter": "alias == 'SystolicBPSeated'",
+                "value": "value",
+                "treatment": "SUM",
+                "overlapHandling": "SUM",
+                "start": "start"
+            }
+        },
+        {
+            "id"  : "MeasurementCode_003",
+            "name": "MeasurementCode_003",
+            "srcType": "Patient",
+            "path": "measurements.(measurementCode.id=='003')",
+            "expression": "avg(avg(normalized.data.value))",
+            "description": "Measurement Code 003"
+        },
+        {
+            "id"  : "MeasurementCode_004",
+            "name": "MeasurementCode_004",
+            "srcType": "Patient",
+            "path": "measurements.(measurementCode.id=='004')",
+            "expression": "avg(avg(normalized.data.value))",
+            "description": "Measurement Code 004"
+        },
+        {
+            "id": "BloodPressure_Patient",
+            "name": "BloodPressure_Patient",
+            "srcType": "Patient",
+            "path": "measurements",
+            "tsDecl": {
+                "data": "data",
+                "filter": "alias == 'BloodPressure'",
                 "value": "value",
                 "treatment": "PREVIOUS",
                 "overlapHandling": "SUM",

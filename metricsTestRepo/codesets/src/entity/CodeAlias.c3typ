@@ -4,12 +4,6 @@ entity type CodeAlias schema name 'CODEALIAS' {
       id is the customers raw/original code which is then mapped to alias (canonical meaning)
     */
    id : ~
-
-   /**
-    The current meaning of this code when mapped to application
-    */
-   //@db(timedValueHistoryField='aliasHistory')
-   //alias: CodeAliasTimedIntervalValue
    
    /**
     Past mappings of this code to application
