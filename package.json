@@ -1,0 +1,23 @@
+{
+  "name": "codesetsexamples2",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "curl": "(cd metricsTestRepo/codesets ; curlAll '*.csv' http://localhost:8080/import/1/codesets/dev '')",
+    "prov": "c3 prov tag -u BA -p BA -t codesets:dev -e http://localhost:8080/ -c codesets -E -r",
+    "up": "docker-compose -f local/docker-compose.yml up --detach",
+    "down": "docker-compose -f local/docker-compose.yml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c3-paul-fenton/codesetsExamples.git"
+  },
+  "author": "Paul Fenton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c3-paul-fenton/codesetsExamples/issues"
+  },
+  "homepage": "https://github.com/c3-paul-fenton/codesetsExamples#readme"
+}

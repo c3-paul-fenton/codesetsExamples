@@ -1,3 +1,7 @@
 type TransformCanonicalCodeAliasToCodeAlias mixes CodeAlias transforms CanonicalCodeAlias {
-    id: ~ expression 'measurementCode'
+    id: ~ expression 'concat(measurementCode,"_",insightTask)'
+    measurementCode: ~ expression { id: "measurementCode" }
+    insightTask: ~ expression 'insightTask'
+    alias: ~ expression 'alias'
+    
 }

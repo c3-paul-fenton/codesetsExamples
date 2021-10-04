@@ -11,7 +11,6 @@ Provision package (run from `./local/prov`):
 ```
 cd local/prov
 ln -s ~/c3/c3base ./
-ln -s ../../metricsTestRepo ./
 c3 prov tag -u BA -p BA -t codesets:dev -e http://localhost:8080/ -c codesets -E -r
 ```
 

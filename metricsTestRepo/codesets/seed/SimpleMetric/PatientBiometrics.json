@@ -2,78 +2,38 @@
     "type": "[SimpleMetric]",
     "value": [
         {
-            "id"  : "MeasurementCode_001",
-            "name": "MeasurementCode_001",
-            "srcType": "Patient",
-            "path": "measurements.(measurementCode.id=='001')",
-            "expression": "avg(avg(normalized.data.value))",
-            "description": "Measurement Code 001"
-        },
-        {
-            "id"  : "MeasurementCode_002",
-            "name": "MeasurementCode_002",
-            "srcType": "Patient",
-            "path": "measurements.(measurementCode.id=='002')",
-            "expression": "avg(avg(normalized.data.value))",
-            "description": "Measurement Code 002"
-        },
-        {
-            "id": "SystolicBloodPressure_Patient",
-            "name": "SystolicBloodPressure",
+            "id": "MeasurementsAvg",
+            "name": "MeasurementsAvg",
             "srcType": "Patient",
             "path": "measurements",
             "tsDecl": {
-                "data": "data",
-                "filter": "alias == 'SystolicBP'",
-                "value": "value",
-                "treatment": "SUM",
-                "overlapHandling": "SUM",
-                "start": "start"
-            }
+              "data": "data",
+              "filter": "parent.measurementCode.aliases.(insightTaskFilter==insightTask && aliasFilter==alias)",
+              "start": "start",
+              "value": "value",
+              "overlapHandling": "AVG",
+              "treatment": "AVG"
+            },
+            "variables": [
+                { "name": "insightTaskFilter", "dataType": "string" },
+                { "name": "aliasFilter", "dataType": "string" }
+            ]
         },
         {
-            "id": "SystolicBloodPressureSeated_Patient",
-            "name": "SystolicBloodPressureSeated",
+            "id"  : "MeasurementCode_BP1",
+            "name": "MeasurementCode_BP1",
             "srcType": "Patient",
-            "path": "measurements",
-            "tsDecl": {
-                "data": "data",
-                "filter": "alias == 'SystolicBPSeated'",
-                "value": "value",
-                "treatment": "SUM",
-                "overlapHandling": "SUM",
-                "start": "start"
-            }
-        },
-        {
-            "id"  : "MeasurementCode_003",
-            "name": "MeasurementCode_003",
-            "srcType": "Patient",
-            "path": "measurements.(measurementCode.id=='003')",
+            "path": "measurements.(measurementCode.id=='BP1')",
             "expression": "avg(avg(normalized.data.value))",
-            "description": "Measurement Code 003"
+            "description": "Measurement Code BP1"
         },
         {
-            "id"  : "MeasurementCode_004",
-            "name": "MeasurementCode_004",
+            "id"  : "MeasurementCode_BP2",
+            "name": "MeasurementCode_BP2",
             "srcType": "Patient",
-            "path": "measurements.(measurementCode.id=='004')",
+            "path": "measurements.(measurementCode.id=='BP2')",
             "expression": "avg(avg(normalized.data.value))",
-            "description": "Measurement Code 004"
-        },
-        {
-            "id": "BloodPressure_Patient",
-            "name": "BloodPressure_Patient",
-            "srcType": "Patient",
-            "path": "measurements",
-            "tsDecl": {
-                "data": "data",
-                "filter": "alias == 'BloodPressure'",
-                "value": "value",
-                "treatment": "PREVIOUS",
-                "overlapHandling": "SUM",
-                "start": "start"
-            }
+            "description": "Measurement Code BP2"
         }
     ]
 }

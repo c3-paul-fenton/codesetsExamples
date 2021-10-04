@@ -1,10 +1,8 @@
 type CanonicalCodeAlias mixes Canonical<CanonicalCodeAlias> {
     
     measurementCode: string
-    
-    start: string
-
-    end: string
 
     alias: string
+
+    insightTask: string
 }
