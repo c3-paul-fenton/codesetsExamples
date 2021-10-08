@@ -1,7 +1,15 @@
+/*
+* BiometricSeries.c3typ
+*/
 entity type BiometricSeries mixes TimedDataHeader<BiometricMeasurement> schema name 'BIOMETRICSERIES' {
 
+  // The {@link Patient} who this measurement series was taken for
   parent   : Patient
 
+  // The {@link MeasurementCode} that this measurement series was recorded with
   measurementCode: !MeasurementCode
+
+  // The {@link CodeAlias}es associated with this {@link MeasurementCode} and the global Insight Task
+  aliases: [CodeAlias](measurementCode, measurementCode)
 
 }

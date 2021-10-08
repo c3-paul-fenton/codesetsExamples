@@ -3,5 +3,4 @@ type TransformCanonicalCodeAliasToCodeAlias mixes CodeAlias transforms Canonical
     measurementCode: ~ expression { id: "measurementCode" }
     insightTask: ~ expression 'insightTask'
     alias: ~ expression 'alias'
-    
 }

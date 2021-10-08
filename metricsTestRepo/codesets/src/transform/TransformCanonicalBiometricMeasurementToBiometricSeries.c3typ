@@ -1,9 +1,5 @@
 type TransformCanonicalBiometricMeasurementToBiometricSeries mixes BiometricSeries transforms CanonicalBiometricMeasurement {
-
     id         : ~ expression 'concat(patientId,"_",measurementCode)'
-    
     parent     : ~ expression '{ "id" : patientId }'
-
     measurementCode : ~ expression { id: "measurementCode" }
-    
 }

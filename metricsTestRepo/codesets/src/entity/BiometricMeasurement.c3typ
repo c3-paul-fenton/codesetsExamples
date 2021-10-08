@@ -1,3 +1,6 @@
+/*
+* BiometricMeasurement.c3typ class holds individual measurement values for the parent timeseries in Cassandra
+*/
 @db(compactType=true,
     datastore='cassandra',
     partitionKeyField='parent',

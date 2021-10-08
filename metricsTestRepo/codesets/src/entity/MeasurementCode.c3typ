@@ -1,3 +1,7 @@
+/*
+* MeasurementCode.c3typ
+*/
 entity type MeasurementCode schema name "MSRMNT_CD" {
-      aliases: [CodeAlias](measurementCode)
+      // the string value of a clients measurement code
+      id: ~
 }

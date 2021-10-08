@@ -1,7 +1,18 @@
+/*
+* Patient.c3typ 
+*/ 
 entity type Patient mixes MetricEvaluatable schema name 'PATIENT' {
     
-    firstName   : string
-    lastName    : string
+    // The patients name
+    firstName: string
+    lastName: string
 
+    // Measurements associated with this patient
     measurements  : [BiometricSeries](parent)
+
+    // Overridden metrics evaluation functions to set default bindings for Insight Task
+    evalMetric: ~ js server
+    evalMetrics: ~ js server
+    evalMetricsWithMetadata: ~ js server
+
 }

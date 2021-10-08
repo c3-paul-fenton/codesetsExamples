@@ -1,14 +1,15 @@
+/*
+* CodeAlias.c3typ
+*/
 entity type CodeAlias schema name 'CODEALIAS' {
 
-   /**
-      id is the customers raw/original code which is then mapped to alias (canonical meaning)
-    */
-   id : ~
-
+   // The {@link MeasurementCode} that measurements are recorded with by clients
    measurementCode: !MeasurementCode
 
+   // Cerners Insight Task label to separate alias mappings by use-case
    insightTask: string
    
+   // The alias mapping for this {@link MeasurementCode} / insightTask combination
    alias: string
 
 }

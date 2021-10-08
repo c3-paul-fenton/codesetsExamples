@@ -8,7 +8,7 @@
             "path": "measurements",
             "tsDecl": {
               "data": "data",
-              "filter": "parent.measurementCode.aliases.(insightTaskFilter==insightTask && aliasFilter==alias)",
+              "filter": "parent.aliases.(insightTaskFilter == insightTask && aliasFilter == alias)",
               "start": "start",
               "value": "value",
               "overlapHandling": "AVG",
