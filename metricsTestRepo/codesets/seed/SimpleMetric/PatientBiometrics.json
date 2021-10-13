@@ -35,6 +35,14 @@
             "path": "measurements.(measurementCode.id=='BP2')",
             "expression": "avg(avg(normalized.data.value))",
             "description": "Measurement Code BP2"
+        },
+        {
+            "id"  : "MeasurementCode_BP3",
+            "name": "MeasurementCode_BP3",
+            "srcType": "Patient",
+            "path": "measurements.(measurementCode.id=='BP3')",
+            "expression": "avg(avg(normalized.data.value))",
+            "description": "Measurement Code BP3"
         }
     ]
 }
