@@ -12,4 +12,7 @@ entity type CodeAlias schema name 'CODEALIAS' {
    // The alias mapping for this {@link MeasurementCode} / insightTask combination
    alias: string
 
+   // The version associated with this mapping
+   aliasVersion: string
+
 }
