@@ -9,11 +9,7 @@
 * c3 cli (c3server on your PATH)
 
 
-# Get the Data
-
-To get the necessary data, follow one of the following steps:
-
-### Obtain File Source Collections from OneDrive
+# Get the Data from OneDrive
 
 Get the following .zip and extract into `metricsTestRepo/codesets/data`:
 [.zip on OneDrive](https://c3e-my.sharepoint.com/:f:/g/personal/sharedfolders_c3iot_com/Erw2ibrYSmBMgOVZdPmeRSsBlACLjgySEouyQmDRoDEB0w?e=ohB1BI)
